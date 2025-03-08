@@ -1,0 +1,76 @@
+# Welcome Bot
+
+## Description
+Welcome Bot is a Discord bot designed to greet new members with a personalized welcome GIF. It logs bot activities, manages welcome messages, and provides interactive buttons for easy navigation to important server sections.
+
+## Features
+- Personalized welcome GIFs with member avatars and names.
+- Logging system for tracking bot activity.
+- Automated log file uploads every 24 hours.
+- Customizable welcome messages.
+- Interactive buttons linking to server information (About Us, Rules, Help, Contact Us).
+
+## Requirements
+- Python 3.x
+- Discord.py
+- PIL (Pillow)
+- Aiohttp
+- Dotenv
+- Logging module
+
+## Installation
+1. Clone or download this repository.
+2. Install the required dependencies using:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Create a `.env` file and add your bot token:
+   ```
+   DISCORD_TOKEN=your_bot_token_here
+   ```
+4. Ensure you have the necessary font and image assets:
+   - `arial.ttf` (Font for text rendering)
+   - `download (1).png` (Default avatar image)
+   - `Base GIF for welcome messages` 
+
+## Permissions
+Make sure the bot has the following permissions enabled in Discord:
+
+-Read Messages
+-Send Messages
+-Manage Messages
+-Attach Files
+-Embed Links
+-View Channels
+-Use Slash Commands (if applicable)
+
+## Usage
+1. Start the bot:
+   ```sh
+   python Welcome_Bot.py
+   ```
+2. Invite the bot to your Discord server with the required permissions.
+3. Ensure the bot has access to the specified channels in the script.
+4. New members will receive a personalized welcome GIF when they join.
+
+## Configuration
+- Modify `SERVER_ID`, `WELCOME_CHANNEL_ID`, and `LOG_CHANNEL_ID` in the script to match your server settings.
+- Update the `FONT_PATH` and `BASE_GIF_PATH` if needed.
+- Adjust button links in `WelcomeButtons` to point to your server's relevant sections.
+
+## Logging
+- All bot activity is logged in `bot_log.txt`.
+- Logs are automatically sent to the log channel every 24 hours.
+- The log file resets after being sent.
+
+## Troubleshooting
+- Ensure your bot has the correct permissions to send messages and upload files.
+- Check the console logs (`bot_log.txt`) for any error messages.
+- If the bot fails to fetch avatars, verify the image URLs or use a default avatar.
+
+## License
+This project is open-source and available for modification and redistribution under the MIT License.
+
+## Author
+Developed by 1ghost100.
+
