@@ -72,5 +72,5 @@ Make sure the bot has the following permissions enabled in Discord:
 This project is open-source and available for modification and redistribution under the MIT License.
 
 ## Author
-Developed by 1ghost100.
+Developed by B-U-T-C-H-3-R.
 
