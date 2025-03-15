@@ -1,0 +1,12 @@
+{
+  "allowed_roles": {
+    "check_for_new_live_stream": ["Admin", "Moderator"],
+    "check_for_new_videos": ["Admin", "Moderator"],
+    "add_channel": ["Admin", "Moderator"],
+    "remove_channel": ["Admin", "Moderator"],
+    "list_channels": ["Admin", "Moderator"],
+    "status": ["Admin"],
+    "presence": ["Admin"],
+    "help": ["Admin", "Moderator"]
+  }
+}
