@@ -1,17 +1,5 @@
 YouTube Promotion Bot v2.5
 
-Description:
-The YouTube Promotion Bot is a Discord bot that automatically tracks and promotes YouTube content. It monitors YouTube channels for new video uploads and live streams, notifying designated Discord channels in real-time. The bot uses the YouTube API and RSS feeds to keep track of updates and engage community members.
-
-Features:
-- Tracks YouTube video uploads and live streams automatically.
-- Sends real-time notifications to a Discord channel.
-- Rotates multiple YouTube API keys to prevent quota exhaustion.
-- Maintains detailed logs of bot activity.
-- Provides easy-to-use slash commands for managing monitored channels.
-- Can send daily log reports to a designated Discord channel (optional feature).
-- Supports Discord role-based access for command execution.
-
 Requirements:
 - Python 3.8 or newer.
 - A valid Discord bot token.
