@@ -1,0 +1,72 @@
+# YouTube Promotion Bot v2
+
+## Prerequisites
+Before using the bot, ensure you have the following:
+- **Python 3.8 or later**
+- **Discord Bot Token** (Create via Discord Developer Portal)
+- **YouTube Data API Keys** (Obtain from Google Cloud Console)
+- **Environment Variables (.env file)** (For storing API keys and bot credentials)
+
+## Installation Guide
+### 1. Clone the Repository
+```sh
+git clone https://github.com/your-repo/youtube-promotion-bot.git
+```
+### 2. Navigate to the Project Directory
+```sh
+cd youtube-promotion-bot
+```
+### 3. Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+### 4. Create a `.env` File
+Create a `.env` file in the project directory and add the following details:
+```env
+DISCORD_TOKEN=your_discord_bot_token
+GUILD_ID=your_guild_id
+DISCORD_CHANNEL_ID=your_discord_channel_id
+COMMANDS_CHANNEL_ID=your_commands_channel_id
+LOG_CHANNEL_ID=your_log_channel_id
+YOUTUBE_API_KEYS=your_api_key1,your_api_key2,...
+```
+
+## Running the Bot
+To start the bot, execute the following command:
+```sh
+python youtube_promotion_bot_v2.py
+```
+
+## Commands
+### **YouTube Channel Management**
+- `/add_youtube_channel <channel_id> <channel_name>` - Adds a YouTube channel to monitoring.
+- `/remove_youtube_channel <channel_id>` - Removes a YouTube channel from monitoring.
+- `/list_youtube_channels` - Displays all monitored YouTube channels.
+- `/check_new_youtube_live_stream` - Manually checks for new live streams.
+- `/check_for_new_youtube_videos` - Manually checks for new video uploads.
+
+### **Bot Customization**
+- `/set_youtube_bot_status <online|idle|dnd|invisible>` - Changes the bot's status.
+- `/set_youtube_bot_presence <activity_type> <activity_name>` - Updates the bot’s activity.
+- `/youtube_bot_help` - Displays help information about available commands.
+
+## Logging and Troubleshooting
+- **Log File**: `logs/bot_activity.log`
+- **Daily Logs**: Automatically posted in the log channel.
+- **Error Handling**: Detects API failures, command errors, and quota limits.
+
+### **Troubleshooting Tips**
+- Ensure the bot is running using `python youtube_promotion_bot_v2.py`.
+- Check that the `.env` file contains the correct credentials.
+- Verify the bot has the required Discord permissions.
+- If YouTube API quota is exceeded, add multiple API keys to `YOUTUBE_API_KEYS`.
+
+## Contributing
+Fork the repository, improve features, and submit pull requests.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For issues or support, open a GitHub issue or contact the B-U-T-C-H-3-R.
+
