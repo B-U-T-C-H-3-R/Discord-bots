@@ -1,0 +1,6 @@
+discord.py==2.3.2
+feedparser==6.0.10
+python-dotenv==1.0.0
+requests==2.31.0
+ratelimit==2.2.1
+pytest==7.4.0  # For testing

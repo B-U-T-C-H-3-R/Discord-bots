@@ -1,0 +1,76 @@
+YouTube Promotion Bot v2.5
+
+Description:
+The YouTube Promotion Bot is a Discord bot that automatically tracks and promotes YouTube content. It monitors YouTube channels for new video uploads and live streams, notifying designated Discord channels in real-time. The bot uses the YouTube API and RSS feeds to keep track of updates and engage community members.
+
+Features:
+- Tracks YouTube video uploads and live streams automatically.
+- Sends real-time notifications to a Discord channel.
+- Rotates multiple YouTube API keys to prevent quota exhaustion.
+- Maintains detailed logs of bot activity.
+- Provides easy-to-use slash commands for managing monitored channels.
+- Can send daily log reports to a designated Discord channel (optional feature).
+- Supports Discord role-based access for command execution.
+
+Requirements:
+- Python 3.8 or newer.
+- A valid Discord bot token.
+- YouTube API key(s) (multiple recommended for load balancing).
+- A `.env` file containing the necessary credentials.
+
+Installation Guide:
+1. Clone the repository or download the bot script:
+   git clone https://github.com/B-U-T-C-H-3-R/Discord-bots/tree/main/Promotion_Bots/youtube_promotion_bots
+   cd youtube-promotion-bot-v3
+
+2. Install required dependencies:
+   pip install -r requirements.txt
+
+3. Set up environment variables:
+   Create a `.env` file in the same directory as the bot script and include the following details:
+   DISCORD_TOKEN=your_discord_bot_token
+   GUILD_ID=your_guild_id
+   DISCORD_CHANNEL_ID=your_discord_channel_id
+   COMMANDS_CHANNEL_ID=your_commands_channel_id
+   LOG_CHANNEL_ID=your_log_channel_id
+   YOUTUBE_API_KEYS=your_api_key1,your_api_key2
+
+4. Run the bot:
+   python youtube_promotion_bot_v2.5.py
+
+Available Commands:
+- /add_youtube_channel <channel_name>: Adds a YouTube channel to the monitored list.
+- /remove_youtube_channel <channel_name>: Removes a YouTube channel from monitoring.
+- /list_youtube_channels: Displays all monitored YouTube channels.
+- /set_youtube_bot_status <status>: Changes the bot’s online status (online, idle, dnd, invisible).
+- /set_youtube_bot_presence <activity> <name>: Updates the bot’s presence to playing, streaming, listening, or watching.
+- /toggle_daily_logs: Enables or disables automatic daily log reporting.
+- /youtube_bot_help: Displays a detailed list of available bot commands.
+- /youtube_bot_health: Check the bot's health status.
+- /clear_youtube_bot_status: Reset the bot's status and presence to default.
+
+Logging:
+The bot logs its activities in `logs/bot_activity.log`. If enabled, it can send a daily summary log to a specific Discord channel. Logs include:
+- YouTube API requests and responses.
+- Bot activity (commands executed, errors, status changes).
+- Notifications sent to Discord.
+
+Troubleshooting Guide:
+- Bot Not Responding
+  - Ensure the bot is online and running.
+  - Verify the bot has the correct permissions in your Discord server.
+  - Check if commands are being used in the designated `COMMANDS_CHANNEL_ID`.
+
+- YouTube API Errors
+  - Confirm that valid YouTube API keys are stored in `.env`.
+  - If receiving quota errors, try adding more API keys for rotation.
+
+- Logs Not Updating
+  - Check `logs/bot_activity.log` for errors.
+  - Ensure the logs directory exists and is writable.
+
+License:
+This bot is open-source and available for modification. Feel free to contribute to its development or customize it to better suit your community’s needs.
+
+Support:
+For issues or support, open a GitHub issue or contact the B-U-T-C-H-3-R.

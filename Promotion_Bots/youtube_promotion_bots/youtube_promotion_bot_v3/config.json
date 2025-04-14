@@ -1,0 +1,43 @@
+{
+  "allowed_roles": {
+    "add_channel": ["Admin", "Moderator"],
+    "remove_channel": ["Admin", "Moderator"],
+    "list_channels": ["Admin", "Moderator", "Member"],
+    "status": ["Admin"],
+    "presence": ["Admin"],
+    "upload_logs": ["Admin", "Moderator"],
+    "health": ["Admin", "Moderator"],
+    "help": ["Admin", "Moderator", "Member"],
+    "admin": ["Admin"]
+  },
+  "notification_settings": {
+    "mention_everyone": true,
+    "notification_message": "@everyone\n**{channel_name} has a new {content_type}!**\n{title}\n{url}",
+    "live_message": " LIVE NOW: {channel_name} - {title}",
+    "video_message": " NEW VIDEO: {channel_name} - {title}"
+  },
+  "monitoring_settings": {
+    "check_interval": 60,
+    "batch_size": 5,
+    "delay_between_batches": 2,
+    "max_videos_to_store": 10,
+    "max_streams_to_store": 10
+  },
+  "logging_settings": {
+    "log_level": "INFO",
+    "max_log_size": "10MB",
+    "backup_count": 5,
+    "log_receiver_id": 0
+  },
+  "network_settings": {
+    "timeout": 30,
+    "max_retries": 3,
+    "retry_delay": 5,
+    "dns_timeout": 5
+  },
+  "appearance_settings": {
+    "default_status": "online",
+    "default_activity": "watching {count} YouTube channels",
+    "embed_color": "#FF0000"
+  }
+}
