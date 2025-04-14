@@ -1,0 +1,55 @@
+Twitch Promotion Bot v0.5
+
+This bot monitors a Twitch streamer's live status and sends notifications to a specified Discord channel when the streamer goes live.
+
+Features
+Monitors a Twitch channel for live status changes.
+
+Sends an @everyone notification to a Discord channel when the streamer goes live.
+
+Checks the live status every 60 seconds.
+
+Prerequisites
+Python 3.6 or higher.
+
+Discord bot token and Twitch API credentials.
+
+Required Python libraries:
+
+discord.py
+
+twitchAPI
+
+python-dotenv
+
+Install the libraries using:
+
+pip install -r requirements.txt
+
+Setup
+Environment Variables
+Create a .env file in the same directory as the script with the following variables:
+
+DISCORD_TOKEN=your_discord_bot_token
+TWITCH_CLIENT_ID=your_twitch_client_id
+TWITCH_CLIENT_SECRET=your_twitch_client_secret
+TWITCH_USERNAME=target_twitch_username
+DISCORD_CHANNEL_ID=target_discord_channel_id
+
+Run the Bot
+Execute the script:
+
+python twitch_promotion_bot_v0.5.py
+
+Configuration
+The bot checks the Twitch channel's live status every 60 seconds. Adjust the delay by modifying the await asyncio.sleep(60) line in the check_live_status() function.
+
+The notification message can be customized in the channel.send() call within the same function.
+
+Notes
+Ensure the Discord bot has the necessary permissions to send messages and mention @everyone in the target channel.
+
+The Twitch API credentials must be valid and have the required permissions to check stream status.
+
+Version: 0.5
+Author: B-U-T-C-H-3-R
