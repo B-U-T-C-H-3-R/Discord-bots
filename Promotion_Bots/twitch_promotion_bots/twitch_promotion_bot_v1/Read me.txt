@@ -1,0 +1,68 @@
+Twitch Promotion Bot v1
+
+A Discord bot that monitors multiple Twitch channels for live status and sends notifications. 
+Includes advanced features like slash commands, role-based permissions, logging, and more.
+
+---
+
+### Features
+- Monitors multiple Twitch channels simultaneously
+- Sends @everyone notifications when streams go live
+- Slash command interface with role and channel restrictions
+- Persistent storage of monitored Twitch usernames
+- Comprehensive logging system with daily uploads
+- Bot status and activity management
+- Manual live stream checking with confirmation
+- Help command with embed formatting
+
+---
+
+### Setup
+1. Install Python 3.8+ and required packages:
+
+pip install -r requirements.txt
+
+Installation Guide:
+1. Clone the repository or download the bot script:
+   git clone https://github.com/B-U-T-C-H-3-R/Discord-bots/tree/main/Promotion_Bots/twitch_promotion_bots/twitch_promotion_bot_v1
+   cd Twitch_promotion_bot_v1
+
+2. Create a `.env` file with these variables:
+DISCORD_TOKEN=your_bot_token
+TWITCH_CLIENT_ID=your_twitch_client_id
+TWITCH_CLIENT_SECRET=your_twitch_client_secret
+DISCORD_CHANNEL_ID=notification_channel_id
+ALLOWED_ROLE_IDS=role_id1,role_id2 (comma-separated)
+ALLOWED_CHANNEL_ID=command_channel_id
+LOG_CHANNEL_ID=log_upload_channel_id
+GUILD_ID=your_server_id
+
+3. Run the bot:
+python Twitch_promotion_bot_v1.py
+
+### Commands
+- `/add_twitch_user` - Add a Twitch username to monitor
+- `/remove_twitch_user` - Remove a monitored username
+- `/list_twitch_users` - Show all monitored users
+- `/set_twitch_bot_status` - Change bot status
+- `/set_twitch_bot_activity` - Set bot activity
+- `/clear_twitch_bot_activity` - Clear bot activity
+- `/check_new_twitch_live_stream` - Manual live check
+- `/toggle_log_upload` - Enable/disable log uploads
+- `/twitch_bot_help` - Show all commands
+
+---
+
+### Requirements
+- Discord bot with these permissions:
+- Send Messages
+- Embed Links
+- Mention @everyone
+- Use Slash Commands
+- Twitch API credentials
+- Python 3.8+
+
+---
+
+Version: 1.0
+Author: B-U-T-C-H-3-R
