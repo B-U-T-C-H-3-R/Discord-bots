@@ -7,7 +7,7 @@
 ## Installation & Setup
 ### 1. Clone the repository
 ```sh
-git clone https://github.com/B-U-T-C-H-3-R/Discord-bots/youtube-promotion-bot.git
+git clone https://github.com/B-U-T-C-H-3-R/Discord-bots/blob/main/Promotion_Bots/youtube_promotion_bots/youtube_promotion_bot_v1
 cd youtube-promotion-bot
 ```
 
@@ -16,8 +16,8 @@ cd youtube-promotion-bot
 pip install -r requirements.txt
 ```
 
-### 3. Create a `.env` file
-Create a `.env` file in the project directory and add the following environment variables:
+### 3. Create a .env file
+Create a .env file in the project directory and add the following environment variables:
 ```
 DISCORD_TOKEN=your_discord_bot_token
 GUILD_ID=your_discord_server_id
@@ -67,7 +67,7 @@ python youtube_promotion_bot_v1.py
 ## Troubleshooting
 - Ensure the bot has the correct permissions in Discord.
 - Check the `.env` file for correct values.
-- Verify that required libraries are installed.
+- Verify that the required libraries are installed.
 - Check `bot.log` for error messages.
 
 ## License
