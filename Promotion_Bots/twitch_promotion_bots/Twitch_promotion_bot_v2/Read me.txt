@@ -1,0 +1,116 @@
+Twitch Promotion Bot v2
+
+A Discord bot that monitors multiple Twitch channels for live status and sends notifications. 
+Includes advanced features like slash commands, role-based permissions, logging, and more.
+
+---
+
+### Features
+- Monitors multiple Twitch channels simultaneously
+- Sends @everyone notifications when streams go live
+- Real-time message updates for game/title changes
+- Offline status notifications when streams end
+- Slash command interface with role and channel restrictions
+- Persistent storage of monitored Twitch usernames
+- Comprehensive logging system with daily uploads and rotation
+- Bot status and activity management
+- Manual live stream checking with confirmation
+- Help command with embed formatting
+- Automatic error recovery and connection retry system
+- DNS fallback and IP pool management for Twitch API
+
+---
+
+### Setup
+
+1. **Install Python 3.8+ and required packages:**
+```bash
+pip install -r requirements.txt
+Installation Guide:
+
+Clone the repository or download the bot script:
+
+git clone https://github.com/B-U-T-C-H-3-R/Discord-bots/tree/main/Promotion_Bots/twitch_promotion_bots/twitch_promotion_bot_v2
+cd Twitch_promotion_bot_v2
+
+Create a .env file with these variables:
+
+DISCORD_TOKEN=your_bot_token
+TWITCH_CLIENT_ID=your_twitch_client_id
+TWITCH_CLIENT_SECRET=your_twitch_client_secret
+DISCORD_CHANNEL_ID=notification_channel_id
+ALLOWED_ROLE_IDS=role_id1,role_id2 (comma-separated)
+ALLOWED_CHANNEL_ID=command_channel_id
+LOG_CHANNEL_ID=log_upload_channel_id
+GUILD_ID=your_server_id
+
+Run the bot:
+
+python Twitch_promotion_bot_v2.py
+
+Commands
+/add_twitch_user - Add a Twitch username to monitor
+/remove_twitch_user - Remove a monitored username
+/list_twitch_users - Show all monitored users with pagination
+/set_twitch_bot_status - Change bot status (online/idle/dnd/invisible)
+/set_twitch_bot_activity - Set bot activity (playing/streaming/listening/watching)
+/clear_twitch_bot_activity - Clear bot activity
+/check_new_twitch_live_stream - Manual live check with confirmation
+/toggle_log_upload - Enable/disable log uploads
+/twitch_bot_help - Show all commands with detailed descriptions
+
+Configuration Options
+
+Notification Cooldown: 5 minutes between notifications
+Stream Check Interval: 30 seconds
+Max Log Files: 7 rotated log files
+Max API Retries: 5 attempts with exponential backoff
+Message Edit Cooldown: 5 minutes between edits
+
+File Structure
+
+twitch_promotion_bot_v2/
+├── twitch_promotion_bot_v2.py # Main bot script
+├── requirements.txt           # Python dependencies
+├── .env                       # Environment variables (create this)
+├── twitch_usernames.json      # Monitored users (auto-generated)
+├── bot_logs.txt               # Current logs (auto-generated)
+├── bot_debug.log              # Debug logs (auto-generated)
+└── bot_logs_*.txt             # Archived logs (auto-generated)
+
+Requirements
+
+Discord Bot Permissions:
+
+Send Messages
+Embed Links
+Mention @everyone
+Use Slash Commands
+Read Message History
+Twitch API Credentials: Required from Twitch Developer Console
+
+Python 3.12.10 with these packages:
+discord.py==2.3.2
+twitchAPI==3.6.0
+python-dotenv==1.0.0
+aiohttp==3.8.5
+asyncio==3.4.3
+
+Troubleshooting
+
+Common Issues:
+
+Ensure all environment variables are correctly set
+Verify Discord bot has proper permissions
+Check Twitch API credentials are valid
+Confirm role IDs and channel IDs are correct
+
+Log Files:
+
+Check bot_logs.txt for operational logs
+Check bot_debug.log for detailed debugging
+Logs automatically upload daily to configured channel
+
+Version: 2.0
+Author: B-U-T-C-H-3-R
+Last Updated: 2025
