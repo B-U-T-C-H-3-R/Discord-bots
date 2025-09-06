@@ -28,12 +28,12 @@ Includes advanced features like slash commands, role-based permissions, logging,
 pip install -r requirements.txt
 Installation Guide:
 
-Clone the repository or download the bot script:
+## Clone the repository or download the bot script:
 
 git clone https://github.com/B-U-T-C-H-3-R/Discord-bots/tree/main/Promotion_Bots/twitch_promotion_bots/twitch_promotion_bot_v2
 cd Twitch_promotion_bot_v2
 
-Create a .env file with these variables:
+## Create a .env file with these variables:
 
 DISCORD_TOKEN=your_bot_token
 TWITCH_CLIENT_ID=your_twitch_client_id
@@ -44,11 +44,12 @@ ALLOWED_CHANNEL_ID=command_channel_id
 LOG_CHANNEL_ID=log_upload_channel_id
 GUILD_ID=your_server_id
 
-Run the bot:
+## Run the bot:
 
 python Twitch_promotion_bot_v2.py
 
-Commands
+## Commands
+
 /add_twitch_user - Add a Twitch username to monitor
 /remove_twitch_user - Remove a monitored username
 /list_twitch_users - Show all monitored users with pagination
@@ -59,7 +60,7 @@ Commands
 /toggle_log_upload - Enable/disable log uploads
 /twitch_bot_help - Show all commands with detailed descriptions
 
-Configuration Options
+## Configuration Options
 
 Notification Cooldown: 5 minutes between notifications
 Stream Check Interval: 30 seconds
@@ -67,7 +68,7 @@ Max Log Files: 7 rotated log files
 Max API Retries: 5 attempts with exponential backoff
 Message Edit Cooldown: 5 minutes between edits
 
-File Structure
+## File Structure
 
 twitch_promotion_bot_v2/
 ├── twitch_promotion_bot_v2.py # Main bot script
@@ -78,7 +79,7 @@ twitch_promotion_bot_v2/
 ├── bot_debug.log              # Debug logs (auto-generated)
 └── bot_logs_*.txt             # Archived logs (auto-generated)
 
-Requirements
+## Requirements
 
 Discord Bot Permissions:
 
@@ -89,7 +90,8 @@ Use Slash Commands
 Read Message History
 Twitch API Credentials: Required from Twitch Developer Console
 
-Python 3.12.10 with these packages:
+## Python 3.12.10 with these packages:
+
 discord.py==2.3.2
 twitchAPI==3.6.0
 python-dotenv==1.0.0
@@ -113,4 +115,5 @@ Logs automatically upload daily to configured channel
 
 Version: 2.0
 Author: B-U-T-C-H-3-R
+
 Last Updated: 2025
