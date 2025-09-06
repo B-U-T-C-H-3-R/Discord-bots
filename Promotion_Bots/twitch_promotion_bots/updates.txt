@@ -1,1 +1,73 @@
+Version 0.5 
+Core Features:
 
+Monitors a single Twitch user from environment variables
+Basic Discord bot with simple live notifications
+No slash commands or user interaction
+Minimal error handling
+No logging system
+Basic Twitch API integration
+
+Limitations
+Single user monitoring only
+No permission syste
+No configuration options
+No persistence (usernames not saved)
+Basic error handling
+
+Version 1.0 
+
+Major Improvements:
+Multiple user monitoring with JSON file persistence
+Slash command system with 9 different commands
+Role-based permissions and channel restrictions
+Logging system with file rotation and Discord upload
+Manual stream checking with confirmation buttons
+Bot status/activity control commands
+Help system with embed formatting
+Error handling for commands
+Guild-specific command syncing
+
+New Features:
+
+/add_twitch_user, /remove_twitch_user, /list_twitch_users
+/set_twitch_bot_status, /set_twitch_bot_activity, /clear_twitch_bot_activity
+/check_new_twitch_live_stream, /twitch_bot_help, /toggle_log_upload
+
+Version 2.0 
+Significant Enhancements:
+
+Connection & Stability
+Advanced connection management with retry logic and backoff
+DNS cache management with Twitch IP fallbacks
+Connection health monitoring with automated recovery
+WebSocket keep-alive system
+Automatic bot restart on critical failures
+Stream Monitoring Improvements
+Rich embed notifications with thumbnails, game info, and Twitch branding
+Message editing for game/title changes instead of new messages
+Offline status updates - edits live messages to show stream ended
+Rate limiting protection for message operations
+Cooldown system to prevent spam
+
+User Experience
+Confirmation dialogs for all destructive actions
+Pagination system for user lists
+Input validation for Twitch usernames
+Auto-delete for timed-out interactions
+Better error messages and user feedback
+
+Technical Improvements
+Rotating file handlers with size limits
+Debug logging separate from main logs
+Message edit attempt tracking with cleanup
+Safe message operations with retry logic
+Custom DNS resolution with fallback IPs
+State management class for connection tracking
+
+New Features
+Stream change detection (game/title changes)
+Embed-rich notifications with proper formatting
+Individual user processing in manual checks
+Default bot status/activity configuration
+Advanced connection recovery
